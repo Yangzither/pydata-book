@@ -1,0 +1,48 @@
+Chapter 1
+Community and Conferences
+To be addedd
+
+Import conventions
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statmodels as sm
+
+
+python:
+official python tutorial
+python cookbook
+fluent python by luciano Ramalho (O'Reilly)
+Effective pytohn by Brett Slatkin (Pearson)
+
+ipython
+%run example.py
+%run -i exmple.py ---> give the script access to variables already defined in ipython
+********************************************************************************
+Jupyter
+$jupyter notebook
+http://localhost:8888/
+
+To run command: shift + Enter
+
+note: Jupyter can also be setup as server and access remotely
+
+Jupyter and ipython can be used interchanged
+
+Tab completion:
+a. ---> for related atrriburte or methods
+
+Hidden private methods: _ and tab to see them
+
+********************************************************************************
+The use of question mark
+b = [1,2,3]
+b?
+
+print? ---> for docstring
+
+np.*load*? ---> for search methods
+note: search ipython name space
+
+Use %load script_name.py to load the script to Jupyter
