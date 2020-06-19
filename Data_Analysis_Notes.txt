@@ -46,3 +46,29 @@ np.*load*? ---> for search methods
 note: search ipython name space
 
 Use %load script_name.py to load the script to Jupyter
+
+********************************************************************************
+Magic command: command line programs to be run within the Ipython system
+%timeit
+%debug?
+%pwd
+foo = %pwd
+
+To learn more about magic command:
+%magic
+%quickref
+
+********************************************************************************
+
+configure matplotlib with Jupyter
+%matplotlib inline
+
+configure matplotlib with ipython
+%matplotlib
+
+import matplotlib.pyplot as plt
+plt.plot(np.random.randn(50).cumsum())
+
+********************************************************************************
+Everything in python is an object, even functions
+ 
