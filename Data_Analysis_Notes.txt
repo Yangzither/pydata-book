@@ -109,3 +109,52 @@ or if you wanted to have 2 sub-plots:
 fig, (ax1, ax2) = plt.subplots(1, 2)
 my_plotter(ax1, data1, data2, {'marker':'x'})
 my_plotter(ax2, data3, data4, {'marker':'o'})
+
+********************************************************************************
+Interactive mode and Non-interactive mode
+plt.ion() ---> interactive mode on
+plt.draw() ---> used to refresh the plot
+
+plt.ioff() ---> interactive mode off
+plt.show() ---> to block execution until you have manually destroyed them.
+
+import matplotlib.pyplot as plt
+impot numpy as np
+import pandas as pd
+import seaborn as sns
+
+fig = plt.figure()
+ax1 = fig.add_subplot(2,2,1)
+ax2 = fig.add_subplot(2,2,2)
+ax3 = fig.add_subplot(2,2,3)
+ax4 = fig.add_subplot(2,2,4)
+
+or fig, axes = plt.subplots(3,4)
+axes[0,1].plot(np.random.randn(1000).cumsum(),'k--')
+axes[1,1].hist(...)
+axes[2,3].scatter(...)
+
+axes[1,1].get_xlim
+axes[1,1].set_xlim
+
+plt.savefig('abc.svg')
+
+PLOT WITH PANDAS AND SEABORN
+s = pd.Series(np.random.randn(10).cumsum(),index = np.arange(0,100,10))
+s.plot()
+
+
+df = pd.DataFrame(np.random.randn(10,4).cumsum(0), columns=['A','B','C','D'],index
+=np.arange(0,100,10))
+df.plot()
+df.plot(subplots=True)
+
+BAR PLOTS
+df.plot.bar(ax=axes[0], color='k', alpha=0.7)
+df.plot.barh(ax=axes[1], color='k', alpha=0.7)
+df.plot.barh(stacked=True, alpha=0.5)
+
+sns.barplot(x='', y='', data=df, orient='h')
+
+tips['tip_pct'].plot.hist(bins=50)
+tips['tip_pct'].plot.density()
